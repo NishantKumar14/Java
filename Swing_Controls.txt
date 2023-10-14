@@ -1,0 +1,106 @@
+JTextField class declaration
+Let's see the declaration for javax.swing.JTextField class.
+
+public class JTextField extends JTextComponent implements SwingConstants  
+-----------------------------------
+
+JButton class declaration
+
+Declaration for javax.swing.JButton class-
+
+public class JButton extends AbstractButton implements Accessible 
+----------------------
+JLabel class declaration
+javax.swing.JLabel class.
+public class JLabel extends JComponent implements SwingConstants, Accessible  
+
+------------------------
+The object of Choice class is used to show popup menu of 
+choices. 
+Choice selected by user is shown on the top of a menu. 
+It inherits JComponent class.
+
+JComboBox class declaration
+Declaration for javax.swing.JComboBox class-
+
+public class JComboBox extends JComponent implements ItemSelectable, ListDataListener, ActionListener, Accessible
+import javax.swing.*;
+import java.awt.*;
+
+class A extends JFrame
+{
+A()
+{
+setLayout(new FlowLayout());
+String s[]={"India","USA","UK"};
+JComboBox cb=new JComboBox(s);
+add(cb);
+}
+
+public static void main(String args[])
+{
+A d=new A();
+d.setSize(300,400);
+d.setVisible(true);
+}
+
+}
+----------------------------------
+JCheckBox class declaration
+Let's see the declaration for javax.swing.JCheckBox class.
+
+public class JCheckBox extends JToggleButton implements Accessible  
+
+
+import javax.swing.*;
+import java.awt.*;
+class A extends JFrame
+{
+A()
+{
+setLayout(new FlowLayout());
+JCheckBox cb1=new JCheckBox();// without Label
+JCheckBox cb2=new JCheckBox("CSE"); // with Label and unselected
+JCheckBox cb3=new JCheckBox("ECE",true); // with Label and selected
+add(cb1);
+add(cb2);
+add(cb3);
+}
+public static void main(String args[])
+{
+A d=new A();
+d.setSize(300,400);
+d.setVisible(true);
+}
+}
+---------------------------------------
+JRadioButton class declaration
+Declaration for javax.swing.JRadioButton class:
+
+public class JRadioButton extends JToggleButton implements Accessible
+
+import javax.swing.*;
+import java.awt.*;
+class A extends JFrame
+{
+A()
+{
+setLayout(new FlowLayout());
+JRadioButton r1=new JRadioButton();// without Label
+JRadioButton r2=new JRadioButton("CSE"); // with Label and unselected
+JRadioButton r3=new JRadioButton("ECE",true); // with Label and selected
+ButtonGroup bg=new ButtonGroup();
+bg.add(r1);
+bg.add(r2);
+bg.add(r3);
+add(r1);
+add(r2);
+add(r3);
+}
+public static void main(String args[])
+{
+A d=new A();
+d.setSize(300,400);
+d.setVisible(true);
+}
+}
